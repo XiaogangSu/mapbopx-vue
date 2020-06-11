@@ -1,25 +1,16 @@
 <template>
-  <div id="app">
-    <div id = "map" v-show="mapshow"></div>
-    <login id="loginid"></login>
-    <router-view/>
-  </div>
+  <div id="map"></div>
 </template>
 
 <script>
 import mapboxgl from "mapbox-gl";
 import axios from "axios";
-import Login from "./views/login.vue"
 export default {
   name: "mapbox_test",
-  components:{
-    Login
-  },
   data() {
     return {
       stylejson: "",
-      instance: null,
-      mapshow:true
+      instance: null
     };
   },
   created() {
@@ -63,7 +54,5 @@ export default {
   text-align: left;
   width: 100%;
   height: 100%;
-  z-index: -1;
 }
-
 </style>
